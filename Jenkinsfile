@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    node {
-      label 'agent1'
-    }
-
-  }
+  agent { label "linux" }
   stages {
     stage('example') {
       steps {
-        sh 'sh \'echo hello world\''
+        sh 'echo hello world'
       }
     }
 
